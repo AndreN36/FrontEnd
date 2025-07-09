@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFO</title>
+</head>
+<body>
+    <!--Cabecalho-->
+    <header>
+        <h1>Casos Ufologicos</h1>
+        <p>Casos Ufologicos mais conhecidos e reportados</p>
+        <!--Navegacao-->
+        <nav>
+            <ul>
+                <li><a href="#caso1">Operacao Prato</a></li>
+                <li><a href="#caso2">Caso Roswell</a></li>
+                <li><a href="#caso3">Caso ET de Varginha</a></li>
+                <li><a href="#formulario">Envie seu relato</a></li>
+            </ul>
+        </nav>
+     <!--Conteudo Principal-->
+     <main>
+        <section id="caso1">
+            <h2>Operacao Prato</h2>
+            <p>Operação Prato foi uma missão militar brasileira realizada em 1977 para investigar avistamentos de OVNIs na região amazônica.</p>
+        </section>
+        <section id="caso2">
+            <h2>Caso Roswell</h2>
+            <p>O Caso Roswell é um dos incidentes mais famosos envolvendo OVNIs, ocorrido em 1947 nos Estados Unidos, onde se alega que um disco voador teria caído.</p>
+        </section>
+        <section id="caso3">
+            <h2>Caso ET de Varginha</h2>
+            <p>O Caso ET de Varginha é um incidente ocorrido em 1996 no Brasil, onde várias pessoas relataram ter visto uma criatura extraterrestre.</p>
+        </section>
+            <section id="formulario">
+                <h2>Formulário de Relato</h2>
+                <form action="relatos.php" method="post">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <hr>
+
+                    <label for="email">E-mail de Contato</label>
+                    <input type="email" id="email" name="email" required>
+                    <hr>
+
+                    <label for="local">Local do Avistamento (Cidade/Estado)</label>
+                    <input type="text" id="local" name="local" required>
+                    <hr>
+
+                    <label for="datahora">Data e Hora do Avistamento</label>
+                    <input type="datetime-local" id="datahora" name="datahora" required>
+                    <hr>
+
+                    <label for="descricao">Descrição Detalhada</label>
+                    <textarea id="descricao" name="descricao" cols="50" rows="6" required></textarea>
+                    <hr>
+
+                    <button type="submit">Enviar Relato</button>
+                    <hr>
+                </form>
+            </section>
+     </main>
+     <!--Rodape-->
+     <footer>
+        <p>&copy; 2025 Casos Ufologicos. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Andre</p>
+     </footer>           
+        
+</body>
+</html>

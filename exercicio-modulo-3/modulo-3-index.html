@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFO</title>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <!--Cabecalho-->
+ <body>
+    <header>
+        <h1>Consultor AWS</h1>
+        <p>Especialista em soluções em nuvem com 9 anos de experiência</p>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#certificacoes">Certificações</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+     <!--Conteudo Principal-->
+   <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou um consultor AWS com 9 anos de experiência em arquitetura de soluções, migração para a nuvem, automação com IaC, e implementação de ambientes escaláveis, seguros e altamente disponíveis.</p>
+            <p>Atuei em empresas de diversos portes, liderando iniciativas de modernização de infraestrutura e DevOps com foco em eficiência e inovação, com base no AWS Well-Architected Framework da AWS.</p>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos Realizados</h2>
+            <article>
+                <h3>Modernização de Infraestrutura - Setor Financeiro</h3>
+                <p>Responsável pela migração de workloads legados para AWS usando CloudFormation, EC2, RDS e serviços gerenciados.</p>
+            </article>
+            <article>
+                <h3>Arquitetura Serverless - E-commerce</h3>
+                <p>Desenvolvimento de arquitetura baseada em Lambda, API Gateway e DynamoDB com foco em alta performance e custo reduzido.</p>
+            </article>
+            <article>
+                <h3>Automação com Terraform e CI/CD</h3>
+                <p>Implantação de pipelines CI/CD com CodePipeline e integração com GitHub Actions, promovendo ambientes imutáveis e seguros.</p>
+            </article>
+        </section>
+
+        <section id="certificacoes">
+            <h2>Certificações</h2>
+            <ul>
+                <li>AWS Certified SysOps Administrator - Associate</li>
+                <li>AWS Certified Solutions Architect - Professional</li>
+                <li>AWS Certified DevOps Engineer - Professional</li>
+                <li>AWS Certified Security - Specialty</li>
+                <li>AWS Certified Solutions Architect - Associate</li>
+                <li>Amazon Q Business Immersion Day</li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <form action="contato.php" method="post">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" cols="50" rows="6" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+     <!--Rodape-->
+     <footer>
+        <p>&copy; 2025 Consultor AWS. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Andre Niemczyk</p>
+     </footer>           
+        
+</body>
+</html>
