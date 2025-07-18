@@ -1,12 +1,16 @@
-// scripts.js
 
-// Classe Parquimetro responsável pela lógica de cálculo
+// Classe Parquimetro que simula o funcionamento de um parquímetro
 class Parquimetro {
-  constructor(taxaMinima = 1.0, tempoPorReal = 30) {
-    this.taxaMinima = taxaMinima; // Valor mínimo: R$1,00
-    this.tempoPorReal = tempoPorReal; // Tempo concedido por real: 30 minutos
+  // Método construtor define os valores e tempos permitidos
+  constructor() {
+    this.tabelaValores = [
+      { valor: 1.00, tempo: 30 },
+      { valor: 1.75, tempo: 60 },
+      { valor: 3.00, tempo: 120 } // tempo máximo permitido
+    ];
   }
 
+  // Método responsável pelo cálculo do tempo e troco
   calcular() {
     const inputValor = document.getElementById("valor");
     const resultado = document.getElementById("resultado");
@@ -18,23 +22,33 @@ class Parquimetro {
       return;
     }
 
-    // Verifica se o valor é suficiente
-    if (valorInserido < this.taxaMinima) {
-      resultado.innerHTML = `<p>Valor insuficiente. Insira pelo menos R$${this.taxaMinima.toFixed(2)}</p>`;
+    // Verificação se valor é menor que o mínimo permitido
+    if (valorInserido < 1.00) {
+      resultado.innerHTML = "<p>Valor insuficiente. Insira pelo menos R$1,00.</p>";
       return;
     }
 
-    // Cálculo do tempo de estacionamento e troco
-    const tempoTotal = Math.floor(valorInserido / this.taxaMinima) * this.tempoPorReal;
-    const valorGasto = Math.floor(valorInserido / this.taxaMinima) * this.taxaMinima;
+    // Buscar na tabela o maior valor possível menor ou igual ao valor inserido
+    let tempoEstacionamento = 0;
+    let valorGasto = 0;
+
+    for (let i = this.tabelaValores.length - 1; i >= 0; i--) {
+      if (valorInserido >= this.tabelaValores[i].valor) {
+        tempoEstacionamento = this.tabelaValores[i].tempo;
+        valorGasto = this.tabelaValores[i].valor;
+        break;
+      }
+    }
+
     const troco = valorInserido - valorGasto;
 
+    // Exibição do resultado
     resultado.innerHTML = `
-      <p><strong>Tempo de Estacionamento:</strong> ${tempoTotal} minutos</p>
+      <p><strong>Tempo de Estacionamento:</strong> ${tempoEstacionamento} minutos</p>
       <p><strong>Troco:</strong> R$${troco.toFixed(2)}</p>
     `;
   }
 }
 
-// Instancia a classe Parquimetro para ser usada na interface
+// Instancia da classe Parquimetro
 const simulador = new Parquimetro();
