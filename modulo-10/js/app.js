@@ -3,7 +3,7 @@ import { Cliente } from './classes.js';
 import { emailJaCadastrado } from './utils.js';
 
 // URL da API do CrudCrud (substitua SEU_ENDPOINT pela sua chave real)
-const apiURL = 'https://crudcrud.com/api/2c614b1166c64e71ae70d3317c633513/clientes';
+const apiURL = 'https://crudcrud.com/api/e4c6ad0f4ce7464abd0bde0a06699a83/clientes';
 
 // Aguarda o carregamento completo da página
 document.addEventListener('DOMContentLoaded', () => {
