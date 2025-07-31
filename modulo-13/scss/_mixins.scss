@@ -1,0 +1,27 @@
+// Mixins reutilizáveis
+@use 'variaveis';
+
+@mixin botao(
+  $bg-color: variaveis.$cor-primaria,
+  $text-color: variaveis.$cor-branco
+) {
+  padding: calc(variaveis.$espacamento-base * 1.25);
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@mixin espaçamento-padrao {
+  margin-bottom: calc(variaveis.$espacamento-base / 2);
+}
+
+@mixin responsivo-texto($tamanho-padrao, $tamanho-menor) {
+  font-size: $tamanho-padrao;
+
+  @media (max-width: 768px) {
+    font-size: $tamanho-menor;
+  }
+}

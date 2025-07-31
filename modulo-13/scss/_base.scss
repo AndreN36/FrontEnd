@@ -1,0 +1,20 @@
+// Reset e configurações globais
+@use 'variaveis';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: variaveis.$tamanho-fonte-base;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: variaveis.$fonte-padrao;
+  line-height: 1.6;
+  color: variaveis.$cor-texto;
+  background-color: variaveis.$cor-secundaria;
+}
