@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agência Criativa Web</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+  <!-- Cabeçalho com logo e menu -->
+  <header class="header">
+    <div class="header__logo">Agência Criativa Web</div>
+    <nav>
+      <ul class="header__nav">
+        <li><a class="header__link" href="#home">Home</a></li>
+        <li><a class="header__link" href="#sobre">Sobre Nós</a></li>
+        <li><a class="header__link" href="#servicos">Serviços</a></li>
+        <li><a class="header__link" href="#depoimentos">Depoimentos</a></li>
+        <li><a class="header__link" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Home -->
+  <section id="home" class="banner section banner--dark">
+    <h1 class="banner__title">Bem-vindo à Agência Criativa Web</h1>
+    <p class="banner__text">Transformando ideias em experiências digitais únicas.</p>
+  </section>
+
+  <!-- Seção Sobre Nós -->
+  <section id="sobre" class="section section--highlight">
+    <h2 class="section__title">Sobre Nós</h2>
+    <p>Somos uma agência de design digital apaixonada por inovação e criatividade. Acreditamos no poder do design para conectar marcas às pessoas.</p>
+  </section>
+
+  <!-- Seção Serviços -->
+  <section id="servicos" class="section">
+    <h2 class="section__title">Serviços</h2>
+    <div class="services">
+      <div class="services__item  header__link--active">Design Gráfico</div>
+      <div class="services__item  header__link--active">Desenvolvimento Web</div>
+      <div class="services__item  header__link--active">Branding</div>
+      <div class="services__item  header__link--active">UX/UI Design</div>
+      <div class="services__item  header__link--active">Marketing Digital</div>
+      <div class="services__item  header__link--active">Consultoria</div>
+    </div>
+  </section>
+
+  <!-- Seção Depoimentos -->
+  <section id="depoimentos" class="section">
+    <h2 class="section__title">Depoimentos</h2>
+    <blockquote class="testimonial testimonial--highlight">
+      "Equipe incrível! Nosso site ficou maravilhoso." – João de Souza
+    </blockquote>
+    <blockquote class="testimonial testimonial--highlight">
+      "Profissionalismo e criatividade definem essa agência." – Pedro Silva
+    </blockquote>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="section">
+    <h2 class="section__title">Contato</h2>
+    <p>Endereço: Rua Visconde do Rio Branco, 465 - Curitiba, PR</p>
+    <p>Telefone: (41) 98850-6522</p>
+    <p>Email: contato@agenciacriativaweb.com.br</p>
+
+    <!-- Formulário de Contato -->
+    <form class="form">
+      <div class="form__group">
+        <label class="form__label" for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" class="form__input" required>
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="email">E-mail:</label>
+        <input type="email" id="email" name="email" class="form__input" required>
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" class="form__textarea" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="form__button form__button--disabled" disabled>Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>&copy; 2025 Agência Criativa Web. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script para aplicar highlight em botões -->
+  <script>
+    document.querySelectorAll('.form__button').forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        button.classList.add('form__button--highlight');
+      });
+      button.addEventListener('mouseleave', () => {
+        button.classList.remove('form__button--highlight');
+      });
+    });
+  </script>
+</body>
+</html>
